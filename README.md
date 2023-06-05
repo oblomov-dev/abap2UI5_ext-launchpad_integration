@@ -1,2 +1,2 @@
-# addon_abap2UI5_launachpad_app
+# addon_abap2UI5_launchpad_app
 App for Launchpad Compatibility
