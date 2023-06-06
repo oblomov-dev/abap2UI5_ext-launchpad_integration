@@ -8,4 +8,4 @@ mta-*
 resources
 archive.zip
 .*_mta_build_tmp
-.vscode
+.vscode/
