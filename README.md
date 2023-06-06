@@ -6,5 +6,4 @@
 * The app does not contain any extra logic, it just reads the launchpad configuration and calls abap2UI5
 * Precondition: Install abap2UI5 first
 <br><br>
-<img width="800" alt="image" src="https://github.com/oblomov-dev/abap2UI5_ext-launchpad_app/assets/102328295/9787bc7d-3d74-4ca3-9596-cef91f08e066">
-
+<img width="800" alt="image" src="https://github.com/oblomov-dev/abap2UI5_ext-launchpad_app/assets/102328295/1fe04e4b-4b16-4b74-8ddc-0bc1d6034f6e">
