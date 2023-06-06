@@ -1,4 +1,4 @@
-# abap2UI5 Extension - Launchpad Compatibility
+# abap2UI5 Extension - Launchpad Support
 
 ### !!! work in progress !!!
 
