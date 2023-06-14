@@ -1,6 +1,6 @@
 # abap2UI5 Extension - Launchpad Integration
 
-### 🚧 !!! work in progress !!! 🚧
+### 🚧 work in progress 🚧
 
 * This repository provides an UI5 app which can be deployed to an on-premise system or the business technology platform. By adding this app to a launchpad abap2UI5 apps can be called via the on-premise Fiori Launchpad or SAP Build Work Zone Launchpad
 * The app does not contain any extra logic, it just reads the launchpad configuration and calls abap2UI5
