@@ -8,14 +8,14 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("abap2ui5.controller.View1", {
-            onAfterRendering: function () {
-    
+           onAfterRendering: function () {
+
                 async function initabap2UI5() {
                     const response = await fetch(sap.z2ui5.pathname);
                     const start = await response.text();
-                    try{
-                    var code = start.split('<abc/>')[1].split('<abc/>')[0];
-                    }catch(error){
+                    try {
+                        var code = start.split('<abc/>')[1].split('<abc/>')[0];
+                    } catch (error) {
                         document.write(start);
                     }
                     sap.ui.controller("z2ui5_dummy_controller", {});
@@ -30,7 +30,7 @@ sap.ui.define([
                     });
                 }
                 sap.z2ui5 = {};
-                sap.z2ui5.pathname = "<<PATHNAME>>"; // "/sap/bc/http/sap/y2ui5_http_handler/";
+                sap.z2ui5.pathname = "<<pathname>>"; // /sap/bc/http/sap/y2ui5_http_handler/";
                 try {
                     sap.z2ui5.oParent = this.oView.getParent();
                     if (sap.z2ui5.oParent.getMetadata().getName() !== 'sap.m.App') {
@@ -41,10 +41,12 @@ sap.ui.define([
                 }
                 try {
                     var app = this.oView.getParent().getComponentData().startupParameters.appid[0];
-                    if (app) {
-                        sap.z2ui5.pathname += app;
-                    }
-                } catch (error) { }
+                } catch (error) {
+                    app = this.getOwnerComponent().getComponentData().startupParameters.appid[0];
+                }
+                if (app) {
+                    sap.z2ui5.pathname += app;
+                }
 
                 initabap2UI5();
 
