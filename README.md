@@ -1,4 +1,4 @@
-# abap2UI5 Extension - Launchpad Integration
+# Extension - Fiori Launchpad Integration (on-premise)
 
 ### 🚧 work in progress 🚧
 
