@@ -7,14 +7,15 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("abap2ui5.controller.View1", {
-             onAfterRendering: function () {
+        return Controller.extend("project2.controller.View1", {
+
+            onAfterRendering: function () {
 
                 async function initabap2UI5() {
                     const response = await fetch(sap.z2ui5.pathname);
                     const start = await response.text();
                     try {
-                        var code = start.split('<abc/>')[1].split('<abc/>')[0];
+                        var code = start.split('<abc/>')[1];
                     } catch (error) {
                         document.write(start);
                     }
@@ -30,7 +31,7 @@ sap.ui.define([
                     });
                 }
                 sap.z2ui5 = {};
-                sap.z2ui5.pathname = "<<pathname>>". // /sap/bc/http/sap/y2ui5_http_handler/";
+                sap.z2ui5.pathname = "<<pathname>>";   // /sap/bc/http/sap/y2ui5_http_handler/";
                 sap.z2ui5.checkLaunchpadActive = true;
                 try {
                     sap.z2ui5.oParent = this.oView.getParent();
@@ -47,8 +48,9 @@ sap.ui.define([
                         app = this.getOwnerComponent().getComponentData().startupParameters.appid[0];
                     } catch (error) { }
                 }
+
                 if (app) {
-                    sap.z2ui5.pathname += app;
+                    sap.z2ui5.search = "?app_start=" + app;
                 }
 
                 initabap2UI5();
@@ -56,6 +58,3 @@ sap.ui.define([
             }
         });
     });
-
-
-    
